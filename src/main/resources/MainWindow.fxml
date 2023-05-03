@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="539.0" prefWidth="662.0"
+	stylesheets="@style1.css" xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="conway.MainWindowController">
+	<center>
+		<ScrollPane fx:id="scrollPane" fitToHeight="true"
+			fitToWidth="true" hbarPolicy="NEVER" onMousePressed="#mousePressed"
+			onMouseReleased="#mouseReleased" vbarPolicy="NEVER">
+			<content>
+				<GridPane fx:id="grid" alignment="CENTER"
+					onDragDetected="#gridDragDetected" onMouseDragged="#onMouseDragged"
+					onScroll="#zoom" />
+			</content>
+			<BorderPane.margin>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</BorderPane.margin>
+		</ScrollPane>
+	</center>
+	<left>
+		<VBox alignment="CENTER" prefWidth="200.0" spacing="10.0"
+			BorderPane.alignment="CENTER_LEFT">
+			<children>
+				<MenuButton fx:id="menuButton" alignment="CENTER"
+					mnemonicParsing="false" prefHeight="44.0" prefWidth="125.0"
+					text="Menu">
+					<items>
+						<MenuItem fx:id="resetButton" mnemonicParsing="false"
+							onAction="#reset" text="New grid" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem fx:id="loadButton" mnemonicParsing="false"
+							onAction="#loadSimulation" text="Open" />
+						<MenuItem fx:id="saveButton" mnemonicParsing="false"
+							onAction="#save" text="Save" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem fx:id="changeRulesButton"
+							mnemonicParsing="false" onAction="#changeRules"
+							text="Change rules" />
+						<MenuItem fx:id="loadRulesButton" mnemonicParsing="false"
+							onAction="#loadRules" text="Open rules" />
+						<MenuItem fx:id="saveRulesButton" mnemonicParsing="false"
+							onAction="#saveRules" text="Save rules" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem fx:id="quitButton" mnemonicParsing="false"
+							onAction="#quit" text="Quit" />
+					</items>
+					<font>
+						<Font size="20.0" />
+					</font>
+				</MenuButton>
+				<Region prefHeight="190.0" prefWidth="201.0"
+					VBox.vgrow="ALWAYS" />
+				<Label fx:id="stepsLabel" text="Generation: 0">
+					<font>
+						<Font size="20.0" />
+					</font>
+					<VBox.margin>
+						<Insets />
+					</VBox.margin>
+				</Label>
+				<Button fx:id="stepButton" alignment="TOP_CENTER"
+					contentDisplay="TOP" mnemonicParsing="false" onAction="#step"
+					text="Next generation" textAlignment="CENTER">
+					<font>
+						<Font size="20.0" />
+					</font>
+				</Button>
+			</children>
+			<BorderPane.margin>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</BorderPane.margin>
+		</VBox>
+	</left>
+	<bottom>
+		<VBox alignment="TOP_CENTER" spacing="10.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<Label fx:id="speedLabel" opacity="0.54"
+					text="Speed: not running">
+					<font>
+						<Font size="20.0" />
+					</font>
+					<graphic>
+						<Button fx:id="startOrPauseButton" mnemonicParsing="false"
+							onAction="#startOrPause" text="Start/Stop">
+							<font>
+								<Font size="20.0" />
+							</font>
+						</Button>
+					</graphic>
+				</Label>
+				<Slider fx:id="simulationSpeedSlider" blockIncrement="0.01"
+					majorTickUnit="0.5" max="7.0" minorTickCount="4"
+					showTickLabels="true" showTickMarks="true" snapToTicks="true"
+					value="1.0" />
+			</children>
+			<BorderPane.margin>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</BorderPane.margin>
+		</VBox>
+	</bottom>
+	<right>
+		<VBox alignment="CENTER" prefWidth="200.0" spacing="10.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<Text lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0"
+					text="In memory of John Horton Conway&#10; (26.12.1937 - 11.04.2020)&#10;inventor of the Game of Life"
+					textAlignment="CENTER">
+					<font>
+						<Font name="System Italic" size="12.0" />
+					</font>
+				</Text>
+				<Region prefHeight="131.0" prefWidth="200.0" />
+				<Button fx:id="randomizeButton" mnemonicParsing="false"
+					onAction="#randomize" prefWidth="120.0" text="Randomize">
+					<font>
+						<Font size="20.0" />
+					</font>
+				</Button>
+				<Button fx:id="invertRulesButton" mnemonicParsing="false"
+					onAction="#invertRules" prefWidth="120.0" text="Invert rules">
+					<font>
+						<Font size="20.0" />
+					</font>
+				</Button>
+				<Button fx:id="invertCellsButton" mnemonicParsing="false"
+					onAction="#invertCells" prefWidth="120.0" text="Invert cells">
+					<font>
+						<Font size="20.0" />
+					</font>
+				</Button>
+			</children>
+			<BorderPane.margin>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</BorderPane.margin>
+		</VBox>
+	</right>
+</BorderPane>

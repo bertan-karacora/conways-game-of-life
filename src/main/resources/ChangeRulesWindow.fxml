@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" stylesheets="@style1.css"
+	xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="conway.ChangeRulesWindowController">
+	<children>
+		<Label text="Living neighbors to survive: ">
+			<GridPane.margin>
+				<Insets bottom="5.0" right="50.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Label>
+		<Label text="Living neighbors to be born:"
+			GridPane.columnIndex="1">
+			<GridPane.margin>
+				<Insets bottom="5.0" right="50.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="20.0" />
+			</font>
+		</Label>
+		<CheckBox fx:id="checkBoxSurviveAt0" mnemonicParsing="false"
+			text="0" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxSurviveAt1" mnemonicParsing="false"
+			text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxSurviveAt2" mnemonicParsing="false"
+			selected="true" text="2" GridPane.halignment="CENTER"
+			GridPane.rowIndex="3">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxSurviveAt3" mnemonicParsing="false"
+			selected="true" text="3" GridPane.halignment="CENTER"
+			GridPane.rowIndex="4">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxSurviveAt4" mnemonicParsing="false"
+			text="4" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxSurviveAt5" mnemonicParsing="false"
+			text="5" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxSurviveAt6" mnemonicParsing="false"
+			text="6" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxSurviveAt7" mnemonicParsing="false"
+			text="7" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxSurviveAt8" mnemonicParsing="false"
+			text="8" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxBornAt0" mnemonicParsing="false"
+			text="0" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+			GridPane.rowIndex="1">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxBornAt1" mnemonicParsing="false"
+			text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+			GridPane.rowIndex="2">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxBornAt2" mnemonicParsing="false"
+			text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+			GridPane.rowIndex="3">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxBornAt3" mnemonicParsing="false"
+			selected="true" text="3" GridPane.columnIndex="1"
+			GridPane.halignment="CENTER" GridPane.rowIndex="4">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxBornAt4" mnemonicParsing="false"
+			text="4" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+			GridPane.rowIndex="5">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxBornAt5" mnemonicParsing="false"
+			text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+			GridPane.rowIndex="6">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxBornAt6" mnemonicParsing="false"
+			text="6" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+			GridPane.rowIndex="7">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxBornAt7" mnemonicParsing="false"
+			text="7" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+			GridPane.rowIndex="8">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<CheckBox fx:id="checkBoxBornAt8" mnemonicParsing="false"
+			text="8" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+			GridPane.rowIndex="9">
+			<GridPane.margin>
+				<Insets bottom="5.0" top="5.0" />
+			</GridPane.margin>
+			<font>
+				<Font size="18.0" />
+			</font>
+		</CheckBox>
+		<Button fx:id="applyRulesButton" mnemonicParsing="false"
+			onAction="#applyRules" text="apply" GridPane.columnSpan="2"
+			GridPane.halignment="CENTER" GridPane.rowIndex="10"
+			GridPane.valignment="CENTER">
+			<font>
+				<Font size="20.0" />
+			</font>
+			<GridPane.margin>
+				<Insets bottom="10.0" top="20.0" />
+			</GridPane.margin>
+		</Button>
+	</children>
+	<columnConstraints>
+		<ColumnConstraints />
+		<ColumnConstraints />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints />
+		<RowConstraints />
+		<RowConstraints />
+		<RowConstraints />
+		<RowConstraints />
+		<RowConstraints />
+		<RowConstraints />
+		<RowConstraints />
+		<RowConstraints />
+		<RowConstraints />
+		<RowConstraints />
+	</rowConstraints>
+	<padding>
+		<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+	</padding>
+</GridPane>

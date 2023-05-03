@@ -1,0 +1,20 @@
+/*
+    Stylesheet for Application
+*/
+.root{
+    -fx-font-size: 14pt;
+    -fx-base: 	#F5F5F5;
+    -fx-background: #f0f0f0;
+}
+
+.button{
+    -fx-color: #f0f0f0;
+    -fx-text-fill: black;
+    -fx-padding: 3 6 6 6;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-color: #778899;
+}
+.button:hover {
+  -fx-background-color: #87cefa;
+}

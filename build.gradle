@@ -1,0 +1,20 @@
+plugins {
+    id "application"
+    id "org.openjfx.javafxplugin" version "latest.release"
+    id "com.gluonhq.client-gradle-plugin" version "latest.release"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	implementation "com.google.code.gson:gson:+"
+}
+
+javafx {
+    version = "11"
+    modules = ["javafx.controls", "javafx.fxml"]
+}
+
+mainClassName = "conway.Main"
